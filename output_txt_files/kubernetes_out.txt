@@ -1,1 +1,28 @@
-<paste log output from Kubernetes-mediated prediction, here>
+--terminal 1 output
+(base) ragav@ragav-HP-Notebook:~/udacity_devops_project4$ ./run_kubernetes.sh 
+pod/predictions-app created
+pod/predictions-app condition met
+NAME              READY   STATUS    RESTARTS   AGE
+predictions-app   1/1     Running   0          3m2s
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
+Handling connection for 8000
+
+
+
+--terminal 2 output
+(base) ragav@ragav-HP-Notebook:~/udacity_devops_project4$ ./make_prediction.sh 
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
+(base) ragav@ragav-HP-Notebook:~/udacity_devops_project4$ ./make_prediction.sh 
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
