@@ -1,4 +1,4 @@
-<include a CircleCI status badge, here>
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/kragavendra/udacity_devops_project4/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/kragavendra/udacity_devops_project4/tree/main)
 
 ## Project Overview
 
@@ -45,6 +45,19 @@ source .devops/bin/activate
 ### Kubernetes Steps
 
 * Setup and Configure Docker locally
+    install docker as described in the link.
+    Run './run_docker.sh' to start the app with Docker
+    Run 'docker ps' to check if docker is running.
+    Run './make_prediction.sh' to make prediction 
 * Setup and Configure Kubernetes locally
+    Run 'curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64'
+    Run 'sudo install minikube-linux-amd64 /usr/local/bin/minikube'
+    Run 'minikube start' to start minikube
+    Run 'kubectl get pods' to see which pods are running.
+    Run './run_kubernetes.sh' to start the app with Kubernetes
+    Run './make_prediction.sh' to make prediction 
 * Create Flask app in Container
+    Run './run_docker.sh' to build and start the Flask app container.
+    Run './upload_docker.sh' to upload the container to docker hub.
 * Run via kubectl
+    Run 'kubectl run predicition-app --image=$USERID/prediction-app --port=80' to start the app with kubectl(replace the $USERID with your docker user id)
