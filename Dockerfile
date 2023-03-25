@@ -10,7 +10,9 @@ ENV PIP_NO_CACHE_DIR=1
 ## Step 2:
 # Copy source code to working directory
 COPY app.py /app/
+COPY Makefile /app/
 COPY requirements.txt /app/
+COPY model_data /app/model_data
 
 ## Step 3:
 # Install packages from requirements.txt
